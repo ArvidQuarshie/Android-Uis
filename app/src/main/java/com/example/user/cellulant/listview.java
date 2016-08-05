@@ -1,5 +1,6 @@
 package com.example.user.cellulant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -44,6 +45,8 @@ public class listview extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = null;
+
 
                 //listview clicked item position
 
@@ -54,10 +57,11 @@ public class listview extends AppCompatActivity {
 
                 String itemValue = (String)listview.getItemAtPosition(position);
 
+
                 //alert or next activity
 
                 Toast.makeText(getApplicationContext(),
-                        "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
+                        "Position :"+i+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
                         .show();
 
 
